@@ -51,8 +51,6 @@ class _PageViewBodyState extends State<PageViewBody> {
                 color: currentPage == 1 || currentPage == 2
                     ? kPrimaryColor
                     : Colors.grey
-
-                // Colors.grey,
                 ),
           ),
           const SizedBox(
