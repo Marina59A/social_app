@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_app/common/services/custom_bloc_observer.dart';
 import 'package:social_app/common/services/git_it_service.dart';
 import 'package:social_app/common/utils/primary_colors.dart';
+import 'package:social_app/features/createPost/presentation/views/create_post_view.dart';
 import 'package:social_app/features/onBoarding/presentation/view/onBoarding_view.dart';
 import 'package:social_app/features/authentication/presentation/view/signUp_view.dart';
 import 'package:social_app/features/authentication/presentation/view/signIn_view.dart';
@@ -57,8 +58,9 @@ class _SocialAppState extends State<SocialApp> {
         OnBoardingView.id: (context) => const OnBoardingView(),
         SignInView.id: (context) => const SignInView(),
         SignUpView.id: (context) => const SignUpView(),
+        CreatePostView.id: (context) => const CreatePostView(),
       },
-      initialRoute: SplashScreen.id,
+      initialRoute: CreatePostView.id,
     );
   }
 }

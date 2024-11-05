@@ -6,6 +6,7 @@ import 'package:social_app/common/utils/widgets/custom_progressHud.dart';
 import 'package:social_app/features/authentication/domain/repos/auth_repo.dart';
 import 'package:social_app/features/authentication/presentation/cuibts/signin_cubit/signin_cubit.dart';
 import 'package:social_app/features/authentication/presentation/widgets/signin_body.dart';
+import 'package:social_app/features/createPost/presentation/views/create_post_view.dart';
 
 BlocProvider<SigninCubit> signinViewBlocConsumer() {
   return BlocProvider(
@@ -14,7 +15,7 @@ BlocProvider<SigninCubit> signinViewBlocConsumer() {
       body: BlocConsumer<SigninCubit, SigninState>(
         listener: (context, state) {
           if (state is SigninSuccess) {
-            //Navigator.of(context).pushReplacementNamed(CreatePostView.id);
+            Navigator.of(context).pushReplacementNamed(CreatePostView.id);
           }
           if (state is SigninFailure) {
             snackShow(context, state.message);
